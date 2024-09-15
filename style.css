@@ -1,3 +1,246 @@
+/* Import in your CSS */
+@import url("https://cdn.jsdelivr.net/gh/jgthms/minireset.css@master/minireset.min.css");
+
+* {
+  font-family: Cabin, sans-serif;
+}
+header {
+  height: 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: bisque;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: sienna;
+}
+header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: sienna;
+}
+
 body {
-  background-color: peru;
+  /* background-color: peru; */
+  background-image: url(./assets/background-cookies.jpg);
+}
+
+#page-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  /* background-color: aqua; */
+  z-index: 1000;
+  height: 94vh;
+}
+#cookie-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+
+  /* background: lightblue; */
+}
+#cookie-button {
+  width: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+#cookie-button:hover {
+  width: 51%;
+}
+#stat-container {
+  /* background-color: red; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+#cookies-total,
+#cookies-per-second {
+  font-size: 2rem;
+  font-weight: 700;
+  background-color: bisque;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: sienna;
+  width: 50%;
+}
+#reset-button {
+  background-color: darkred;
+  width: 15%;
+  margin: 5%;
+  color: white;
+  cursor: pointer;
+}
+
+#shop-upgrade-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 94vh;
+}
+
+.shop-container {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+#master-shop-container {
+  width: 90%;
+  background-color: bisque;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: sienna;
+}
+
+.shop-item-container {
+  display: flex;
+  flex-direction: row;
+
+  align-items: left;
+  justify-content: space-between;
+
+  gap: 5px;
+  padding-left: 5px;
+  padding-right: 3px;
+}
+
+.upgrade {
+  position: relative;
+  width: 15%;
+}
+.upgrade-name {
+  width: 50%;
+  max-width: 160;
+}
+.upgrade-button {
+  background-color: rgb(255, 191, 113);
+  border: none;
+  margin: 2px;
+  font-size: 0.8rem;
+}
+
+.upgrade-button:hover {
+  font-size: 1rem;
+  background-color: rgb(255, 167, 58);
+  cursor: pointer;
+}
+
+@media (max-width: 850px) {
+  * {
+    /* flex-wrap: wrap; */
+  }
+  header {
+    height: 5%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    background-color: bisque;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: sienna;
+    width: 100vw;
+  }
+  header h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: sienna;
+  }
+  #page-container {
+    display: flex;
+    /* grid-template-columns: 1fr; */
+    /* grid-template-rows: 1fr 1fr; */
+    /* background-color: aqua; */
+    flex-direction: column;
+    z-index: 1000;
+    height: 94vh;
+    width: 100vw;
+  }
+
+  #cookie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* height: 50vh;
+    width: 100vw; */
+
+    /* background: lightblue; */
+  }
+  #cookie-button {
+    width: 40%;
+    cursor: pointer;
+    transition: 0.2s;
+    margin-top: 20px;
+  }
+  #cookie-button:hover {
+    width: 51%;
+  }
+  #stat-container {
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+  }
+  #cookies-total,
+  #cookies-per-second {
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: bisque;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: sienna;
+    width: 70%;
+  }
+  #reset-button {
+    background-color: darkred;
+    width: 15%;
+    margin-bottom: 8%;
+    color: white;
+    cursor: pointer;
+  }
+
+  #shop-upgrade-container {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    height: 94vh;
+    width: 100vw;
+  }
+
+  .shop-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+  }
+
+  #master-shop-container {
+    width: 70vw;
+    background-color: bisque;
+    border-radius: 8px;
+    border-style: solid;
+    border-color: sienna;
+    font-size: 0.8rem;
+  }
+
+  .shop-item-container {
+    display: flex;
+    flex-direction: row;
+
+    align-items: left;
+    justify-content: space-between;
+
+    gap: 5px;
+    padding-left: 5px;
+    padding-right: 3px;
+  }
+  .upgrade-name {
+    width: 20%;
+    max-width: 160;
+    text-wrap: wrap;
+    margin: 1px;
+  }
 }

@@ -3,15 +3,33 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400..700;1,400..700&display=swap"
+      rel="stylesheet"
+    />
     <title>Cookie clicker</title>
     <link rel="stylesheet" href="./style.css" />
     <script src="./app.js" defer></script>
+    <link rel="icon" href="./assets/cookie.png" type="image/x-icon" />
   </head>
   <body>
-    <h1>Lovely cookies</h1>
-    <button id="cookie-button">cookie button</button>
-    <button id="reset-button">reset button</button>
-    <p id="cookies-total">cookies total</p>
-    <p id="cookies-per-second">cookies per second</p>
+    <header>
+      <h1>COOKIE CLICKER!!</h1>
+    </header>
+    <section id="page-container">
+      <div id="cookie-container">
+        <img src="./assets/cookie.png" id="cookie-button" />
+        <div id="stat-container">
+          <p id="cookies-total">cookies total</p>
+          <p id="cookies-per-second">cookies per second</p>
+        </div>
+        <button id="reset-button">reset button</button>
+      </div>
+      <section id="shop-upgrade-container">
+        <section id="master-shop-container"></section>
+      </section>
+    </section>
   </body>
 </html>
