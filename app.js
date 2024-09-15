@@ -3,6 +3,20 @@ console.log(`hello`);
 const cookieSound = new Audio("./assets/cookie-sound.wav");
 const buySound = new Audio("./assets/ping-sound.wav");
 
+const audio = document.querySelector(`audio`);
+
+// Set the audio to autoplay and loop
+audio.autoplay = true;
+audio.loop = true;
+
+// Set the initial volume
+audio.volume = 0.15;
+
+// Play the audio
+audio.play().catch((error) => {
+  console.error("Error playing audio:", error);
+});
+
 let shopUpgrades = [];
 // get shop upgrade data from api
 const url = `https://cookie-upgrade-api.vercel.app/api/upgrades`;
